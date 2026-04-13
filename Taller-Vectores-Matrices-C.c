@@ -1,10 +1,11 @@
 #include <stdio.h>
 
 int main() {
+    // Requerimiento 1: 5 estudiantes y 3 asignaturas [cite: 18]
     float notas[5][3];
     float sumaEstudiante, sumaAsignatura;
     int aprobados;
-
+   // Requerimiento 2 y 3: Ingreso y Validación (0-10) [cite: 19, 20]
     for (int i = 0; i < 5; i++) {
         printf("--- Estudiante %d ---\n", i + 1);
         for (int j = 0; j < 3; j++) {
@@ -17,7 +18,7 @@ int main() {
             } while (notas[i][j] < 0 || notas[i][j] > 10);
         }
     }
-
+//  PROMEDIOS POR ESTUDIANTE [cite: 22, 30] 
     printf("\n--- Promedio por Estudiante ---\n");
     for (int i = 0; i < 5; i++) {
         sumaEstudiante = 0;
@@ -29,7 +30,7 @@ int main() {
         }
         printf("Estudiante %d: %.2f (Max: %.2f, Min: %.2f)\n", i + 1, sumaEstudiante / 3, maxEst, minEst);
     }
-
+// PROMEDIOS Y APROBADOS POR ASIGNATURA [cite: 24, 27, 31, 33]
     printf("\n--- Reporte por Asignatura ---\n");
     for (int j = 0; j < 3; j++) {
         sumaAsignatura = 0;
