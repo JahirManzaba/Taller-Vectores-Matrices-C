@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int main() {
     // Requerimiento 1: 5 estudiantes y 3 asignaturas [cite: 18]
     float notas[5][3];
@@ -36,7 +35,6 @@ int main() {
         sumaAsignatura = 0;
         aprobados = 0;
         float maxAsig = notas[0][j], minAsig = notas[0][j];
-        
         for (int i = 0; i < 5; i++) {
             sumaAsignatura += notas[i][j];
             // Nota aprobatoria >= 6 [cite: 28]
@@ -48,6 +46,5 @@ int main() {
                 j + 1, sumaAsignatura / 5, aprobados, 5 - aprobados);
         printf("   (Nota mas alta: %.2f, mas baja: %.2f)\n", maxAsig, minAsig);
     }
-
     return 0;
 }
